@@ -1,0 +1,566 @@
+/*TAMAÑO CHICO*/
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html{
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+ body{
+    background-color: rgb(255, 255, 255); 
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.imagenRedes{
+    height: 20px;
+    width: auto;
+}
+
+.titulo{
+    text-align: center;
+    grid-area: titulo;
+}
+
+.subtitulo{
+    text-align: center;
+    grid-area: subtitulo;
+}
+
+header{
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "nav";
+    background-color: rgb(255, 131, 73);
+    padding: 10px;
+    grid-area: header;
+}
+
+#logo {
+    height: auto;
+    width: 200px; 
+    grid-area: logo;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.nav{
+    margin: 0;
+    padding: 0;
+    grid-area: nav;
+}
+
+.barraNav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+footer{
+    margin-top: auto;
+    bottom: 0;
+    text-align: center;
+    grid-area: footer;
+}
+
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+/*INDEX*/
+#wrapperIndex{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "seccionIndex"
+    "aboutMe"
+    "footer";
+}
+
+.seccionIndex{
+    background-color: rgb(140, 219, 104);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
+    grid-area: seccionIndex;
+}
+
+.imagenIndex{
+    width: 80%;
+    height: auto;
+    margin: 0;
+}
+
+.aboutMe{
+    background-color: rgb(140, 219, 104);
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    grid-area: aboutMe;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    grid-template-areas: 
+    "titulo"
+    "fotoIzquierda"
+    "parrafoDerecha";
+}
+
+.fotoIzquierda{
+    height: auto;
+    width: 200px;
+    grid-area: fotoIzquierda;
+}
+
+.parrafoDerecha{
+    width: auto;
+    height: 150px;
+    grid-area: parrafoDerecha;
+}
+
+
+/*CONTACT*/
+#wrapperContact{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "seccionContact"
+    "footer"
+}
+
+.labelContactName{
+    text-align: center;
+    grid-area: labelContactName;
+}
+
+.labelContactMail{
+    text-align: center;
+    grid-area: labelContactMail;
+}
+
+.labelContactQuestions{
+    text-align: center;
+    grid-area: labelContactQuestions;
+}
+
+.nameContactInput{
+   grid-area: nameContactInput; 
+}
+
+.mailContactInput{
+    grid-area: mailContactInput;
+}
+
+.questionsContactInput{
+    grid-area: questionsContactInput;
+} 
+
+.buttonContact{
+    background-color: rgb(255, 125, 63);
+    box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0.8);
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.seccionContact{
+    background-color: rgb(140, 219, 104);
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    grid-area: seccionContact;
+}
+
+.formContact{
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "labelContactName"
+    "nameContactInput"
+    "labelContactMail"
+    "mailContactInput"
+    "labelContactQuestions"
+    "questionsContactInput"
+}
+
+.articleContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*Attraction*/
+.imagenattraction{
+    width: 70%;
+}
+
+.articuloAtraccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 50px;
+}
+
+
+/*Curiosities*/
+#wrapperCuriosities{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "articulosCuriosidadIzquierda"
+    "articulosCuriosidadDerecha"
+    "footer";
+}
+
+.articulosCuriosidadIzquierda, .articulosCuriosidadDerecha{
+    background-color: rgb(140, 219, 104);
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    grid-template-areas: 
+    "subtitulo"
+    "foto"
+    "parrafo";
+}
+
+.articulosCuriosidadIzquierda{
+    grid-area: articulosCuriosidadIzquierda;
+}
+
+.articulosCuriosidadDerecha{
+    grid-area: articulosCuriosidadDerecha;
+}
+
+.foto{
+    height: auto;
+    width: 200px;
+    grid-area: foto;
+}
+
+.parrafo{
+    width: auto;
+    height: 150px;
+    grid-area: parrafo;
+}
+
+
+/*Information*/
+#wrapperInformation{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "seccionInformation"
+    "seccionInformation"
+    "footer";
+}
+
+.seccionInformation{
+    background-color: rgb(140, 219, 104);
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    grid-area: seccionInformation;
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+    grid-template-areas: 
+    "subtitulo"
+    "parrafoInformation";
+}
+
+.parrafoInformation{
+    width: auto;
+    height: 300px;
+    grid-area: parrafoInformation;
+}
+
+
+
+/*TAMA;O MEDIO*/
+@media screen and (min-width: 765px){
+    /*General*/
+    html{
+        font-size: 24px;
+    }
+    
+    .imagenRedes{
+        height: 25px;
+        width: 25px;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "logo ."
+        "nav nav";
+        padding: 15px;
+        grid-area: header;
+    }
+    
+    #logo {
+        width: 300px; 
+        grid-area: logo;
+    }
+
+    .nav{
+        grid-area: nav;
+    }
+    .barraNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    /*Index*/
+    #wrapperIndex{
+        gap: 40px;
+    }
+    
+    .aboutMe{
+        display: grid;
+        gap: 7px;
+        grid-template-areas: 
+        "titulo titulo"
+        "fotoIzquierda parrafoDerecha";
+    }
+    .fotoIzquierda{
+        width: 300px;
+        grid-area: fotoIzquierda;
+    }
+    
+    .parrafoDerecha{
+        width: 290px;
+        grid-area: parrafoDerecha;
+    }
+
+    /*Curiosities*/
+    #wrapperCuriosities{
+        gap: 40px;
+    }
+    .articulosCuriosidadIzquierda{ 
+        width: 85%;
+        display: grid;
+        gap: 7px;
+        justify-items: center;
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "foto parrafo";
+    }
+    .articulosCuriosidadDerecha{
+        width: 85%;
+        display: grid;
+        gap: 7px;
+        justify-items: center;
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "parrafo foto";
+    }
+    .foto{
+        height: auto;
+        width: 300px;
+        grid-area: foto;
+    }
+    .parrafo{
+        width: auto;
+        height: 290px;
+        grid-area: parrafo;
+    }
+    /*Information*/
+    #wrapperInformation{
+        gap: 40px;   
+    }
+    
+    .seccionInformation{
+        display: grid;
+        gap: 7px;
+        margin-top: 40px;
+    }    
+    .parrafoInformation{
+        width: auto;
+        height: 400px;
+    }
+    /*Contact*/
+    #wrapperContact{
+        gap: 40px;
+    }
+    .buttonContact{
+        font-size: 20px;
+    }
+    .formContact{
+        gap: 10px;
+    }
+}
+
+/*TAMA;O GRANDE*/
+@media screen and (min-width: 1024px){
+    /*General*/
+    html{
+        font-size: 26px;
+    }
+    
+    .imagenRedes{
+        height: 30px;
+        width: 30px;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "logo ."
+        "logo nav";
+        padding: 20px;
+        grid-area: header;
+    }
+    
+    #logo {
+        width: 350px; 
+        grid-area: logo;
+    }
+    
+    .nav{
+        grid-area: nav;
+    }
+    .barraNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    /*Index*/
+    #wrapperIndex{
+        gap: 50px;
+    }
+    
+    .aboutMe{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "titulo titulo"
+        "fotoIzquierda parrafoDerecha";
+    }
+    .fotoIzquierda{
+        height: 500px;
+        width: auto;
+        grid-area: fotoIzquierda;
+    }
+    
+    .parrafoDerecha{
+        height: auto;
+        width: 400px;
+        grid-area: parrafoDerecha;
+    }
+    /*Curiosities*/
+    #wrapperCuriosities{
+        gap: 50px;
+    }
+    .articulosCuriosidadIzquierda{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "foto parrafo";
+    }
+    .articulosCuriosidadDerecha{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "subtitulo subtitulo"
+        "parrafo foto";
+    }
+    .foto{
+        height: auto;
+        width: 400px;
+        grid-area: foto;
+    }
+    .parrafo{
+        width: 400px;
+        height: auto;
+        grid-area: parrafo;
+    }
+    /*Information*/
+    #wrapperInformation{
+        gap: 50px;
+    }
+    
+    .seccionInformation{
+        display: grid;
+        gap: 10px;
+        margin-top: 50px;
+    }    
+    .parrafoInformation{
+        width: auto;
+        height: 400px;
+    }
+    /*Contact*/
+    #wrapperContact{
+        gap: 50px;
+    }
+    .buttonContact{
+        font-size: 25px;
+    }
+    .formContact{
+        gap: 20px;
+    }
+}
