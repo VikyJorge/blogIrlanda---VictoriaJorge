@@ -102,6 +102,10 @@ footer{
     text-align: center;
     box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
     grid-area: seccionIndex;
+    transition: all 2s;
+}
+.seccionIndex:hover{
+    transform: scale(1.05,1.05);
 }
 
 .imagenIndex{
@@ -117,7 +121,8 @@ footer{
     margin: 0 auto;
     border-radius: 1rem;
     padding: 2rem 2rem;
-    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
+    transition: all 2s; 
     grid-area: aboutMe;
     display: grid;
     gap: 5px;
@@ -126,6 +131,9 @@ footer{
     "titulo"
     "fotoIzquierda"
     "parrafoDerecha";
+}
+.aboutMe:hover{
+    transform: scale(1.05,1.05);
 }
 
 .fotoIzquierda{
@@ -194,7 +202,11 @@ footer{
     border-radius: 1rem;
     padding: 2rem 2rem;
     box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    transition: all 2s;
     grid-area: seccionContact;
+}
+.seccionContact:hover{
+    transform: scale(1.05,1.05);
 }
 
 .formContact{
@@ -254,6 +266,7 @@ footer{
     border-radius: 1rem;
     padding: 2rem 2rem;
     box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
+    transition: all 2s;
     display: grid;
     gap: 5px;
     justify-items: center;
@@ -261,6 +274,12 @@ footer{
     "subtitulo"
     "foto"
     "parrafo";
+}
+.articulosCuriosidadDerecha:hover{
+    transform: scale(1.05,1.05);
+}
+.articulosCuriosidadIzquierda:hover{
+    transform: scale(1.05,1.05);
 }
 
 .articulosCuriosidadIzquierda{
@@ -304,6 +323,7 @@ footer{
     margin-top: 20px;
     border-radius: 1rem;
     padding: 2rem 2rem;
+    transition: all 2s;
     box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
     grid-area: seccionInformation;
     display: grid;
@@ -312,6 +332,9 @@ footer{
     grid-template-areas: 
     "subtitulo"
     "parrafoInformation";
+}
+.seccionInformation:hover{
+    transform: scale(1.05,1.05);
 }
 
 .parrafoInformation{
