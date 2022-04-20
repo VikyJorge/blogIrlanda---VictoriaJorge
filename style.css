@@ -65,7 +65,7 @@ ul{
 .barraNav{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 footer{
@@ -201,12 +201,8 @@ footer{
     margin: 0 auto;
     border-radius: 1rem;
     padding: 2rem 2rem;
-    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
-    transition: all 2s;
+    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8);
     grid-area: seccionContact;
-}
-.seccionContact:hover{
-    transform: scale(1.05,1.05);
 }
 
 .formContact{
@@ -232,17 +228,17 @@ footer{
 
 
 /*Attraction*/
-.imagenattraction{
-    width: 70%;
+.carouselExampleFade{
+    grid-area: carousel;
 }
-
-.articuloAtraccion{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 50px;
+#wrapperAttraction{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "carousel"
+    "footer";
 }
 
 
@@ -496,6 +492,7 @@ footer{
     
     .nav{
         grid-area: nav;
+        justify-content: flex-end;
     }
     .barraNav{
         display: flex;
