@@ -189,6 +189,7 @@ footer{
     "mailContactInput"
     "labelContactQuestions"
     "questionsContactInput"
+    "button"
 }
 
 .articleContact{
@@ -197,10 +198,14 @@ footer{
     justify-content: center;
 }
 
+#buttonContact{
+    grid-area: button;
+}
+
 
 /*Attraction*/
-.carouselExampleFade{
-    grid-area: carousel;
+.sectionAttraction{
+    grid-area: seccionAtraction;
 }
 #wrapperAttraction{
     display: grid;
@@ -208,7 +213,7 @@ footer{
     grid-template-areas: 
     "header"
     "titulo"
-    "carousel"
+    "seccionAtraction"
     "footer";
 }
 
@@ -282,33 +287,6 @@ footer{
     "footer";
 }
 
-.seccionInformation{
-    background-color: rgb(140, 219, 104);
-    width: 70%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 20px;
-    border-radius: 1rem;
-    padding: 2rem 2rem;
-    transition: all 2s;
-    box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 0.8); 
-    grid-area: seccionInformation;
-    display: grid;
-    gap: 5px;
-    justify-items: center;
-    grid-template-areas: 
-    "subtitulo"
-    "parrafoInformation";
-}
-.seccionInformation:hover{
-    transform: scale(1.05,1.05);
-}
-
-.parrafoInformation{
-    width: auto;
-    height: 300px;
-    grid-area: parrafoInformation;
-}
 
 
 
@@ -390,16 +368,7 @@ footer{
     #wrapperInformation{
         gap: 40px;   
     }
-    
-    .seccionInformation{
-        display: grid;
-        gap: 7px;
-        margin-top: 40px;
-    }    
-    .parrafoInformation{
-        width: auto;
-        height: 400px;
-    }
+
     /*Contact*/
     #wrapperContact{
         gap: 40px;
@@ -484,16 +453,7 @@ footer{
     #wrapperInformation{
         gap: 50px;
     }
-    
-    .seccionInformation{
-        display: grid;
-        gap: 10px;
-        margin-top: 50px;
-    }    
-    .parrafoInformation{
-        width: auto;
-        height: 400px;
-    }
+
     /*Contact*/
     #wrapperContact{
         gap: 50px;
