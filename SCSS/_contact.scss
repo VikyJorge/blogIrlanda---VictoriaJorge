@@ -1,0 +1,85 @@
+.wrapperContact{
+    display: grid;
+    gap: $gapEstructurasChico;
+    grid-template-areas: 
+    "header"
+    "seccionContact"
+    "footer";
+    .seccionContact{
+        background-color: $colorCards;
+        width: 85%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+        box-shadow: 0 0.1rem 0.4rem $colorSombras;
+        grid-area: seccionContact;
+        .formContact{
+            display: grid;
+            gap: $gapGeneralChico/2;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "labelContactName"
+            "nameContactInput"
+            "labelContactMail"
+            "mailContactInput"
+            "labelContactQuestions"
+            "questionsContactInput"
+            "button";
+            .articleContact{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .labelContactName{
+                    text-align: center;
+                    grid-area: labelContactName;
+                }
+                
+                .labelContactMail{
+                    text-align: center;
+                    grid-area: labelContactMail;
+                }
+                
+                .labelContactQuestions{
+                    text-align: center;
+                    grid-area: labelContactQuestions;
+                }
+                
+                .nameContactInput{
+                   grid-area: nameContactInput; 
+                }
+                
+                .mailContactInput{
+                    grid-area: mailContactInput;
+                }
+                
+                .questionsContactInput{
+                    grid-area: questionsContactInput;
+                } 
+            }
+            #buttonContact{
+                grid-area: button;
+            }    
+        }
+    }
+}
+
+@media screen and (min-width: 765px){
+    #wrapperContact{
+        gap: $gapEstructurasMediano;
+    }
+    .formContact{
+        gap: $gapGeneralMediano*2;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .wrapperContact{
+        gap: $gapEstructurasGrande;
+    }
+    .formContact{
+        gap: $gapGeneralGrande*2;
+    }
+}

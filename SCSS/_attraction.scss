@@ -1,0 +1,12 @@
+.wrapperAttraction{
+    display: grid;
+    gap: $gapEstructurasChico;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "seccionAtraction"
+    "footer";
+    .sectionAttraction{
+        grid-area: seccionAtraction;
+    }
+}

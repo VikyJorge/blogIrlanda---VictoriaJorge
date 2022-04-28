@@ -1,0 +1,50 @@
+@import "utilidades";
+/*HEADER*/
+header{
+    background-color: $colorheader;
+    padding: 10px;
+    grid-area: header;
+}
+
+/*FOOTER*/
+footer{
+    margin-top: auto;
+    bottom: 0;
+    text-align: center;
+    grid-area: footer;
+    .redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style-type: none;
+        padding-left: 10px;
+        .imagenRedes{
+            height: 20px;
+            width: auto;
+        }  
+    }
+}
+
+@media screen and (min-width: 765px){
+    footer{
+        .redes{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .imagenRedes{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    footer{
+        .redes{
+            .imagenRedes{
+                height: 30px;
+                width: 30px;
+            }
+        }   
+    }
+}    

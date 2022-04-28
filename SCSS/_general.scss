@@ -1,0 +1,36 @@
+@import "utilidades";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $colorbody; 
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.titulo{
+    text-align: center;
+    grid-area: titulo;
+}
+
+.subtitulo{
+    text-align: center;
+    grid-area: subtitulo;
+}
+
+@media screen and (min-width: 765px){
+    html{
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    html{
+        font-size: 26px;
+    }
+}

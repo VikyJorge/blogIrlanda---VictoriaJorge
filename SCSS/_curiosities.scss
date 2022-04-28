@@ -1,0 +1,113 @@
+.wrapperCuriosities{
+    display: grid;
+    gap: $gapEstructurasChico;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "articulosCuriosidadIzquierda"
+    "articulosCuriosidadDerecha"
+    "footer";
+    .articulosCuriosidadIzquierda, .articulosCuriosidadDerecha{
+        background-color: $colorCards;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+        box-shadow: 0 0.1rem 0.4rem $colorSombras; 
+        transition: all 2s;
+        display: grid;
+        gap: $gapGeneralChico;
+        justify-items: center;
+        grid-template-areas: 
+        "subtitulo"
+        "foto"
+        "parrafo";
+        &:hover{
+            transform: scale(1.05,1.05);
+        }
+        .foto{
+            height: auto;
+            width: 200px;
+            grid-area: foto;
+        }
+        
+        .parrafo{
+            width: auto;
+            height: 150px;
+            grid-area: parrafo;
+        }
+    }
+}
+.articulosCuriosidadIzquierda{
+    grid-area: articulosCuriosidadIzquierda;
+}
+
+.articulosCuriosidadDerecha{
+    grid-area: articulosCuriosidadDerecha;
+}
+
+@media screen and (min-width: 765px){
+    .wrapperCuriosities{
+        gap: $gapEstructurasMediano;
+        .articulosCuriosidadIzquierda{ 
+            width: 85%;
+            display: grid;
+            gap: $gapGeneralMediano;
+            grid-template-areas: 
+            "subtitulo subtitulo"
+            "foto parrafo";
+            .foto{
+                width: 300px;
+            }
+            .parrafo{
+                height: 290px;
+            }
+        }
+        .articulosCuriosidadDerecha{
+            width: 85%;
+            display: grid;
+            gap: $gapGeneralMediano;
+            grid-template-areas: 
+            "subtitulo subtitulo"
+            "parrafo foto";
+            .foto{
+                width: 300px;
+            }
+            .parrafo{
+                height: 290px;
+            }
+        }
+    }  
+}
+@media screen and (min-width: 1024px){
+    .wrapperCuriosities{
+        gap: $gapEstructurasGrande;
+        .articulosCuriosidadIzquierda{
+            display: grid;
+            gap: $gapGeneralGrande;
+            grid-template-areas: 
+            "subtitulo subtitulo"
+            "foto parrafo";
+            .foto{
+                width: 400px;
+            }
+            .parrafo{
+                width: 400px;
+            }
+        }
+        .articulosCuriosidadDerecha{
+            display: grid;
+            gap: $gapGeneralGrande;
+            grid-template-areas: 
+            "subtitulo subtitulo"
+            "parrafo foto";
+            .foto{
+                width: 400px;
+            }
+            .parrafo{
+                width: 400px;
+            }
+        }
+    }   
+}

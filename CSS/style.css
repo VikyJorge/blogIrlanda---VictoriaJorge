@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.titulo {
+  text-align: center;
+  grid-area: titulo;
+}
+
+.subtitulo {
+  text-align: center;
+  grid-area: subtitulo;
+}
+
+@media screen and (min-width: 765px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 26px;
+  }
+}
+/*HEADER*/
+header {
+  background-color: rgb(255, 131, 73);
+  padding: 10px;
+  grid-area: header;
+}
+
+/*FOOTER*/
+footer {
+  margin-top: auto;
+  bottom: 0;
+  text-align: center;
+  grid-area: footer;
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-left: 10px;
+}
+footer .redes .imagenRedes {
+  height: 20px;
+  width: auto;
+}
+
+@media screen and (min-width: 765px) {
+  footer .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .redes .imagenRedes {
+    height: 25px;
+    width: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer .redes .imagenRedes {
+    height: 30px;
+    width: 30px;
+  }
+}
+.wrapperIndex {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "seccionIndex" "aboutMe" "footer";
+}
+
+.seccionIndex {
+  background-color: rgb(140, 219, 104);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
+  grid-area: seccionIndex;
+  transition: all 2s;
+}
+.seccionIndexhover {
+  transform: scale(1.05, 1.05);
+}
+.seccionIndex .imagenIndex {
+  width: 80%;
+  height: auto;
+  margin: 0;
+}
+
+.aboutMe {
+  background-color: rgb(140, 219, 104);
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
+  transition: all 2s;
+  grid-area: aboutMe;
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+  grid-template-areas: "titulo" "fotoIzquierda" "parrafoDerecha";
+}
+.aboutMehover {
+  transform: scale(1.05, 1.05);
+}
+.aboutMe .fotoIzquierda {
+  height: auto;
+  width: 200px;
+  grid-area: fotoIzquierda;
+}
+.aboutMe .parrafoDerecha {
+  width: auto;
+  height: 150px;
+  grid-area: parrafoDerecha;
+}
+
+@media screen and (min-width: 765px) {
+  .wrapperIndex {
+    gap: 40px;
+  }
+
+  .aboutMe {
+    display: grid;
+    gap: 7px;
+    grid-template-areas: "titulo titulo" "fotoIzquierda parrafoDerecha";
+  }
+  .aboutMe .fotoIzquierda {
+    width: 300px;
+  }
+  .aboutMe .parrafoDerecha {
+    width: 290px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapperIndex {
+    gap: 50px;
+  }
+
+  .aboutMe {
+    /* display: grid; */
+    gap: 10px;
+    /* grid-template-areas: 
+    "titulo titulo"
+    "fotoIzquierda parrafoDerecha"; */
+  }
+  .aboutMe .fotoIzquierda {
+    height: 500px;
+    width: auto;
+  }
+  .aboutMe .parrafoDerecha {
+    width: 400px;
+  }
+}
+.wrapperContact {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "seccionContact" "footer";
+}
+.wrapperContact .seccionContact {
+  background-color: rgb(140, 219, 104);
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
+  grid-area: seccionContact;
+}
+.wrapperContact .seccionContact .formContact {
+  display: grid;
+  gap: 2.5px;
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "labelContactName" "nameContactInput" "labelContactMail" "mailContactInput" "labelContactQuestions" "questionsContactInput" "button";
+}
+.wrapperContact .seccionContact .formContact .articleContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapperContact .seccionContact .formContact .articleContact .labelContactName {
+  text-align: center;
+  grid-area: labelContactName;
+}
+.wrapperContact .seccionContact .formContact .articleContact .labelContactMail {
+  text-align: center;
+  grid-area: labelContactMail;
+}
+.wrapperContact .seccionContact .formContact .articleContact .labelContactQuestions {
+  text-align: center;
+  grid-area: labelContactQuestions;
+}
+.wrapperContact .seccionContact .formContact .articleContact .nameContactInput {
+  grid-area: nameContactInput;
+}
+.wrapperContact .seccionContact .formContact .articleContact .mailContactInput {
+  grid-area: mailContactInput;
+}
+.wrapperContact .seccionContact .formContact .articleContact .questionsContactInput {
+  grid-area: questionsContactInput;
+}
+.wrapperContact .seccionContact .formContact #buttonContact {
+  grid-area: button;
+}
+
+@media screen and (min-width: 765px) {
+  #wrapperContact {
+    gap: 40px;
+  }
+
+  .formContact {
+    gap: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapperContact {
+    gap: 50px;
+  }
+
+  .formContact {
+    gap: 20px;
+  }
+}
+.wrapperCuriosities {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "titulo" "articulosCuriosidadIzquierda" "articulosCuriosidadDerecha" "footer";
+}
+.wrapperCuriosities .articulosCuriosidadIzquierda, .wrapperCuriosities .articulosCuriosidadDerecha {
+  background-color: rgb(140, 219, 104);
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
+  transition: all 2s;
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+  grid-template-areas: "subtitulo" "foto" "parrafo";
+}
+.wrapperCuriosities .articulosCuriosidadIzquierda:hover, .wrapperCuriosities .articulosCuriosidadDerecha:hover {
+  transform: scale(1.05, 1.05);
+}
+.wrapperCuriosities .articulosCuriosidadIzquierda .foto, .wrapperCuriosities .articulosCuriosidadDerecha .foto {
+  height: auto;
+  width: 200px;
+  grid-area: foto;
+}
+.wrapperCuriosities .articulosCuriosidadIzquierda .parrafo, .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
+  width: auto;
+  height: 150px;
+  grid-area: parrafo;
+}
+
+.articulosCuriosidadIzquierda {
+  grid-area: articulosCuriosidadIzquierda;
+}
+
+.articulosCuriosidadDerecha {
+  grid-area: articulosCuriosidadDerecha;
+}
+
+@media screen and (min-width: 765px) {
+  .wrapperCuriosities {
+    gap: 40px;
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda {
+    width: 85%;
+    display: grid;
+    gap: 7px;
+    grid-template-areas: "subtitulo subtitulo" "foto parrafo";
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda .foto {
+    width: 300px;
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo {
+    height: 290px;
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha {
+    width: 85%;
+    display: grid;
+    gap: 7px;
+    grid-template-areas: "subtitulo subtitulo" "parrafo foto";
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha .foto {
+    width: 300px;
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
+    height: 290px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapperCuriosities {
+    gap: 50px;
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "subtitulo subtitulo" "foto parrafo";
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda .foto {
+    width: 400px;
+  }
+  .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo {
+    width: 400px;
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "subtitulo subtitulo" "parrafo foto";
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha .foto {
+    width: 400px;
+  }
+  .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
+    width: 400px;
+  }
+}
+.wrapperAttraction {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "titulo" "seccionAtraction" "footer";
+}
+.wrapperAttraction .sectionAttraction {
+  grid-area: seccionAtraction;
+}
+
+.wrapperInformation {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "titulo" "seccionInformation" "seccionInformation" "footer";
+}
+
+@media screen and (min-width: 765px) {
+  .wrapperInformation {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapperInformation {
+    gap: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
