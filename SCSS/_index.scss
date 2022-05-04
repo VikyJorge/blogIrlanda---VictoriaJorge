@@ -1,4 +1,10 @@
-@import "utilidades";
+@import "variables";
+
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
+
 .wrapperIndex{
     display: grid;
     gap: $gapEstructurasChico;
@@ -11,7 +17,7 @@
 
 .seccionIndex{
     background-color: $colorCards;
-    width: 70%;
+    @include sizes(70%, auto);
     margin: 0 auto;
     border-radius: 1rem;
     padding: 2rem 2rem;
@@ -19,25 +25,18 @@
     box-shadow: 0 0.1rem 0.4rem $colorSombras;
     grid-area: seccionIndex;
     transition: all 2s;
-    &hover{
+    &:hover{
         transform: scale(1.05,1.05);
     }
-    .imagenIndex{
-        width: 80%;
-        height: auto;
-        margin: 0;
-    }
+}
+.imagenIndex{
+    @include sizes(80%, auto);
+    margin: 0;
 }
 
 .aboutMe{
-    background-color: $colorCards;
-    width: 85%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 1rem;
-    padding: 2rem 2rem;
-    box-shadow: 0 0.1rem 0.4rem $colorSombras;
-    transition: all 2s; 
+    @extend .seccionIndex;
+    @include sizes(85%, auto);
     grid-area: aboutMe;
     display: grid;
     gap: $gapGeneralChico;
@@ -46,18 +45,12 @@
     "titulo"
     "fotoIzquierda"
     "parrafoDerecha";
-    &hover{
-        transform: scale(1.05,1.05);
-    }
     .fotoIzquierda{
-        height: auto;
-        width: 200px;
+        @include sizes(200px, auto);
         grid-area: fotoIzquierda;
     }
-    
     .parrafoDerecha{
-        width: auto;
-        height: 150px;
+        @include sizes(auto, 150px);
         grid-area: parrafoDerecha;
     }
 }
@@ -73,10 +66,10 @@
         "titulo titulo"
         "fotoIzquierda parrafoDerecha";
         .fotoIzquierda{
-            width: 300px;
+            @include sizes(300px, auto);
         }
         .parrafoDerecha{
-            width: 290px;
+            @include sizes(290px, auto);
         }
     }   
 }
@@ -86,17 +79,12 @@
     }
     
     .aboutMe{
-        /* display: grid; */
         gap: $gapGeneralGrande;
-        /* grid-template-areas: 
-        "titulo titulo"
-        "fotoIzquierda parrafoDerecha"; */
         .fotoIzquierda{
-            height: 500px;
-            width: auto;
+            @include sizes(auto, 500px);
         }
         .parrafoDerecha{
-            width: 400px;
+            @include sizes(400px, auto);
         }
     }
 }

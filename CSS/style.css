@@ -81,9 +81,10 @@ footer .redes .imagenRedes {
   grid-template-areas: "header" "seccionIndex" "aboutMe" "footer";
 }
 
-.seccionIndex {
+.seccionIndex, .aboutMe {
   background-color: rgb(140, 219, 104);
   width: 70%;
+  height: auto;
   margin: 0 auto;
   border-radius: 1rem;
   padding: 2rem 2rem;
@@ -92,36 +93,28 @@ footer .redes .imagenRedes {
   grid-area: seccionIndex;
   transition: all 2s;
 }
-.seccionIndexhover {
+.seccionIndex:hover, .aboutMe:hover {
   transform: scale(1.05, 1.05);
 }
-.seccionIndex .imagenIndex {
+
+.imagenIndex {
   width: 80%;
   height: auto;
   margin: 0;
 }
 
 .aboutMe {
-  background-color: rgb(140, 219, 104);
   width: 85%;
   height: auto;
-  margin: 0 auto;
-  border-radius: 1rem;
-  padding: 2rem 2rem;
-  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
-  transition: all 2s;
   grid-area: aboutMe;
   display: grid;
   gap: 5px;
   justify-items: center;
   grid-template-areas: "titulo" "fotoIzquierda" "parrafoDerecha";
 }
-.aboutMehover {
-  transform: scale(1.05, 1.05);
-}
 .aboutMe .fotoIzquierda {
-  height: auto;
   width: 200px;
+  height: auto;
   grid-area: fotoIzquierda;
 }
 .aboutMe .parrafoDerecha {
@@ -142,9 +135,11 @@ footer .redes .imagenRedes {
   }
   .aboutMe .fotoIzquierda {
     width: 300px;
+    height: auto;
   }
   .aboutMe .parrafoDerecha {
     width: 290px;
+    height: auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -153,18 +148,15 @@ footer .redes .imagenRedes {
   }
 
   .aboutMe {
-    /* display: grid; */
     gap: 10px;
-    /* grid-template-areas: 
-    "titulo titulo"
-    "fotoIzquierda parrafoDerecha"; */
   }
   .aboutMe .fotoIzquierda {
-    height: 500px;
     width: auto;
+    height: 500px;
   }
   .aboutMe .parrafoDerecha {
     width: 400px;
+    height: auto;
   }
 }
 .wrapperContact {
@@ -244,14 +236,14 @@ footer .redes .imagenRedes {
   grid-template-areas: "header" "titulo" "articulosCuriosidadIzquierda" "articulosCuriosidadDerecha" "footer";
 }
 .wrapperCuriosities .articulosCuriosidadIzquierda, .wrapperCuriosities .articulosCuriosidadDerecha {
-  background-color: rgb(140, 219, 104);
-  width: 70%;
-  height: auto;
   margin: 0 auto;
-  border-radius: 1rem;
-  padding: 2rem 2rem;
+  border-radius: 1 rem;
+  padding: 2 rem 2 rem;
   box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
   transition: all 2s;
+  width: 70%;
+  height: auto;
+  background-color: rgb(140, 219, 104);
   display: grid;
   gap: 5px;
   justify-items: center;
@@ -261,8 +253,8 @@ footer .redes .imagenRedes {
   transform: scale(1.05, 1.05);
 }
 .wrapperCuriosities .articulosCuriosidadIzquierda .foto, .wrapperCuriosities .articulosCuriosidadDerecha .foto {
-  height: auto;
   width: 200px;
+  height: auto;
   grid-area: foto;
 }
 .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo, .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
@@ -285,26 +277,32 @@ footer .redes .imagenRedes {
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda {
     width: 85%;
+    height: auto;
     display: grid;
     gap: 7px;
     grid-template-areas: "subtitulo subtitulo" "foto parrafo";
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .foto {
     width: 300px;
+    height: auto;
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo {
+    width: auto;
     height: 290px;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha {
     width: 85%;
+    height: auto;
     display: grid;
     gap: 7px;
     grid-template-areas: "subtitulo subtitulo" "parrafo foto";
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .foto {
     width: 300px;
+    height: auto;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
+    width: auto;
     height: 290px;
   }
 }
@@ -319,9 +317,11 @@ footer .redes .imagenRedes {
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .foto {
     width: 400px;
+    height: auto;
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo {
     width: 400px;
+    height: auto;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha {
     display: grid;
@@ -330,9 +330,11 @@ footer .redes .imagenRedes {
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .foto {
     width: 400px;
+    height: auto;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
     width: 400px;
+    height: auto;
   }
 }
 .wrapperAttraction {

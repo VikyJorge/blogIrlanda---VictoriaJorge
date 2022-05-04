@@ -1,5 +1,10 @@
+$display: (
+    grid: grid,
+    flex: flex,
+);
+
 .wrapperContact{
-    display: grid;
+    display: map-get($display, grid);
     gap: $gapEstructurasChico;
     grid-template-areas: 
     "header"
@@ -15,7 +20,7 @@
         box-shadow: 0 0.1rem 0.4rem $colorSombras;
         grid-area: seccionContact;
         .formContact{
-            display: grid;
+            display: map-get($display, grid);
             gap: $gapGeneralChico/2;
             justify-items: center;
             justify-content: center;
@@ -29,7 +34,7 @@
             "questionsContactInput"
             "button";
             .articleContact{
-                display: flex;
+                display: map-get($display, flex);
                 flex-direction: column;
                 justify-content: center;
                 .labelContactName{

@@ -1,3 +1,15 @@
+
+@mixin card ($margin, $border, $padding, $sombra, $transition) {
+    margin: $margin;
+    border-radius: $border;
+    padding: $padding;
+    box-shadow: $sombra;
+    transition: $transition;
+}
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
 .wrapperCuriosities{
     display: grid;
     gap: $gapEstructurasChico;
@@ -8,14 +20,9 @@
     "articulosCuriosidadDerecha"
     "footer";
     .articulosCuriosidadIzquierda, .articulosCuriosidadDerecha{
+        @include card(0 auto, 1 rem, 2 rem 2 rem, 0 0.1rem 0.4rem $colorSombras, all 2s);
+        @include sizes(70%, auto);
         background-color: $colorCards;
-        width: 70%;
-        height: auto;
-        margin: 0 auto;
-        border-radius: 1rem;
-        padding: 2rem 2rem;
-        box-shadow: 0 0.1rem 0.4rem $colorSombras; 
-        transition: all 2s;
         display: grid;
         gap: $gapGeneralChico;
         justify-items: center;
@@ -27,14 +34,12 @@
             transform: scale(1.05,1.05);
         }
         .foto{
-            height: auto;
-            width: 200px;
+            @include sizes(200px, auto);
             grid-area: foto;
         }
         
         .parrafo{
-            width: auto;
-            height: 150px;
+            @include sizes(auto, 150px);
             grid-area: parrafo;
         }
     }
@@ -51,31 +56,31 @@
     .wrapperCuriosities{
         gap: $gapEstructurasMediano;
         .articulosCuriosidadIzquierda{ 
-            width: 85%;
+            @include sizes(85%, auto);
             display: grid;
             gap: $gapGeneralMediano;
             grid-template-areas: 
             "subtitulo subtitulo"
             "foto parrafo";
             .foto{
-                width: 300px;
+                @include sizes(300px, auto);
             }
             .parrafo{
-                height: 290px;
+                @include sizes(auto, 290px);
             }
         }
         .articulosCuriosidadDerecha{
-            width: 85%;
+            @include sizes(85%, auto);
             display: grid;
             gap: $gapGeneralMediano;
             grid-template-areas: 
             "subtitulo subtitulo"
             "parrafo foto";
             .foto{
-                width: 300px;
+                @include sizes(300px, auto);
             }
             .parrafo{
-                height: 290px;
+                @include sizes(auto, 290px);
             }
         }
     }  
@@ -90,10 +95,10 @@
             "subtitulo subtitulo"
             "foto parrafo";
             .foto{
-                width: 400px;
+                @include sizes(400px, auto);
             }
             .parrafo{
-                width: 400px;
+                @include sizes(400px, auto);
             }
         }
         .articulosCuriosidadDerecha{
@@ -103,10 +108,10 @@
             "subtitulo subtitulo"
             "parrafo foto";
             .foto{
-                width: 400px;
+                @include sizes(400px, auto);
             }
             .parrafo{
-                width: 400px;
+                @include sizes(400px, auto);
             }
         }
     }   
