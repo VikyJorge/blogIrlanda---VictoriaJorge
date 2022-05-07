@@ -78,11 +78,11 @@ footer .redes .imagenRedes {
 .wrapperIndex {
   display: grid;
   gap: 20px;
-  grid-template-areas: "header" "seccionIndex" "aboutMe" "footer";
+  grid-template-areas: "header" "seccionIndex" "aboutMe" "comunidad" "footer";
 }
 
 .seccionIndex, .aboutMe {
-  background-color: rgb(140, 219, 104);
+  background-color: rgb(194, 240, 173);
   width: 70%;
   height: auto;
   margin: 0 auto;
@@ -123,6 +123,15 @@ footer .redes .imagenRedes {
   grid-area: parrafoDerecha;
 }
 
+.mb-5 {
+  grid-area: comunidad;
+  margin: 3rem;
+}
+
+.card-body {
+  background-color: rgb(194, 240, 173);
+}
+
 @media screen and (min-width: 765px) {
   .wrapperIndex {
     gap: 40px;
@@ -159,77 +168,10 @@ footer .redes .imagenRedes {
     height: auto;
   }
 }
-.wrapperContact {
-  display: grid;
-  gap: 20px;
-  grid-template-areas: "header" "seccionContact" "footer";
-}
-.wrapperContact .seccionContact {
-  background-color: rgb(140, 219, 104);
-  width: 85%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 1rem;
-  padding: 2rem 2rem;
-  box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
-  grid-area: seccionContact;
-}
-.wrapperContact .seccionContact .formContact {
-  display: grid;
-  gap: 2.5px;
-  justify-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-areas: "labelContactName" "nameContactInput" "labelContactMail" "mailContactInput" "labelContactQuestions" "questionsContactInput" "button";
-}
-.wrapperContact .seccionContact .formContact .articleContact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.wrapperContact .seccionContact .formContact .articleContact .labelContactName {
-  text-align: center;
-  grid-area: labelContactName;
-}
-.wrapperContact .seccionContact .formContact .articleContact .labelContactMail {
-  text-align: center;
-  grid-area: labelContactMail;
-}
-.wrapperContact .seccionContact .formContact .articleContact .labelContactQuestions {
-  text-align: center;
-  grid-area: labelContactQuestions;
-}
-.wrapperContact .seccionContact .formContact .articleContact .nameContactInput {
-  grid-area: nameContactInput;
-}
-.wrapperContact .seccionContact .formContact .articleContact .mailContactInput {
-  grid-area: mailContactInput;
-}
-.wrapperContact .seccionContact .formContact .articleContact .questionsContactInput {
-  grid-area: questionsContactInput;
-}
-.wrapperContact .seccionContact .formContact #buttonContact {
-  grid-area: button;
+.form-floating {
+  padding: 0.5rem;
 }
 
-@media screen and (min-width: 765px) {
-  #wrapperContact {
-    gap: 40px;
-  }
-
-  .formContact {
-    gap: 14px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .wrapperContact {
-    gap: 50px;
-  }
-
-  .formContact {
-    gap: 20px;
-  }
-}
 .wrapperCuriosities {
   display: grid;
   gap: 20px;
@@ -237,13 +179,13 @@ footer .redes .imagenRedes {
 }
 .wrapperCuriosities .articulosCuriosidadIzquierda, .wrapperCuriosities .articulosCuriosidadDerecha {
   margin: 0 auto;
-  border-radius: 1 rem;
-  padding: 2 rem 2 rem;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
   box-shadow: 0 0.1rem 0.4rem rgb(0, 0, 1);
   transition: all 2s;
   width: 70%;
   height: auto;
-  background-color: rgb(140, 219, 104);
+  background-color: rgb(194, 240, 173);
   display: grid;
   gap: 5px;
   justify-items: center;
@@ -316,12 +258,12 @@ footer .redes .imagenRedes {
     grid-template-areas: "subtitulo subtitulo" "foto parrafo";
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .foto {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 350px;
   }
   .wrapperCuriosities .articulosCuriosidadIzquierda .parrafo {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 300px;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha {
     display: grid;
@@ -329,27 +271,28 @@ footer .redes .imagenRedes {
     grid-template-areas: "subtitulo subtitulo" "parrafo foto";
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .foto {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 400px;
   }
   .wrapperCuriosities .articulosCuriosidadDerecha .parrafo {
-    width: 400px;
-    height: auto;
+    width: auto;
+    height: 400px;
   }
 }
-.wrapperAttraction {
-  display: grid;
-  gap: 20px;
-  grid-template-areas: "header" "titulo" "seccionAtraction" "footer";
-}
-.wrapperAttraction .sectionAttraction {
-  grid-area: seccionAtraction;
+.sectionAttraction {
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .wrapperInformation {
   display: grid;
   gap: 20px;
   grid-template-areas: "header" "titulo" "seccionInformation" "seccionInformation" "footer";
+}
+
+.accordion {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 765px) {

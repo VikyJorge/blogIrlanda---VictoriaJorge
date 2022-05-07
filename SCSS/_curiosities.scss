@@ -20,14 +20,14 @@
     "articulosCuriosidadDerecha"
     "footer";
     .articulosCuriosidadIzquierda, .articulosCuriosidadDerecha{
-        @include card(0 auto, 1 rem, 2 rem 2 rem, 0 0.1rem 0.4rem $colorSombras, all 2s);
+        @include card(0 auto, 1rem, 2rem 2rem, 0 0.1rem 0.4rem $colorSombras, all 2s);
         @include sizes(70%, auto);
         background-color: $colorCards;
         display: grid;
         gap: $gapGeneralChico;
         justify-items: center;
         grid-template-areas: 
-        "subtitulo"
+        "subtitulo" 
         "foto"
         "parrafo";
         &:hover{
@@ -95,10 +95,10 @@
             "subtitulo subtitulo"
             "foto parrafo";
             .foto{
-                @include sizes(400px, auto);
+                @include sizes(auto, 350px);
             }
             .parrafo{
-                @include sizes(400px, auto);
+                @include sizes(auto, 300px);
             }
         }
         .articulosCuriosidadDerecha{
@@ -108,10 +108,10 @@
             "subtitulo subtitulo"
             "parrafo foto";
             .foto{
-                @include sizes(400px, auto);
+                @include sizes(auto, 400px);
             }
             .parrafo{
-                @include sizes(400px, auto);
+                @include sizes(auto, 400px);
             }
         }
     }   

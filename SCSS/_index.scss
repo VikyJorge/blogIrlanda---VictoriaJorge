@@ -12,6 +12,7 @@
     "header"
     "seccionIndex"
     "aboutMe"
+    "comunidad"
     "footer";
 }
 
@@ -53,6 +54,13 @@
         @include sizes(auto, 150px);
         grid-area: parrafoDerecha;
     }
+}
+.mb-5{
+    grid-area: comunidad;
+    margin: 3rem;
+}
+.card-body{
+    background-color: $colorCards;
 }
 
 @media screen and (min-width: 765px){
